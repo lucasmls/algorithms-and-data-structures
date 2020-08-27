@@ -4,9 +4,9 @@ CCOPTS=-Wall -Wextra
 BINARIES_FOLDER=.bin
 OBJECTS_FOLDER=.objects
 
-BINARIES=
+BINARIES=algorithms/binary_search 
 
-OBJECT_FILES=
+OBJECT_FILES=algorithms/binary_search.o
 
 LIBS=
 
@@ -29,4 +29,4 @@ folders:
 
 $(BINARIES): $(OBJECT_FILES)
 	@ echo [INFO] Creating binary $(BINARIES_FOLDER)/$(notdir $@)
-	@ $(CC) $(CCOPTS) -o $(BINARIES_FOLDER)/$(notdir $@) $(OBJECTS_FOLDER)/$(notdir $<) $(LIBS)
+	@ $(CC) $(CCOPTS) -o $(BINARIES_FOLDER)/$(notdir $@) $(OBJECTS_FOLDER)/$(notdir $@).o $(LIBS)
