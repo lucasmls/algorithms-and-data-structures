@@ -6,9 +6,10 @@ OBJECTS_FOLDER=.objects
 
 BINARIES=algorithms/binary_search 
 
-OBJECT_FILES=algorithms/binary_search.o
+OBJECT_FILES=algorithms/binary_search.o \
+	data-structures/array/array.o \
 
-LIBS=
+LIBS=$(OBJECTS_FOLDER)/array.o
 
 .PHONE: all clean
 
