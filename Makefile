@@ -4,12 +4,14 @@ CCOPTS=-Wall -Wextra
 BINARIES_FOLDER=.bin
 OBJECTS_FOLDER=.objects
 
-BINARIES=algorithms/binary_search 
+BINARIES=algorithms/binary_search
 
 OBJECT_FILES=algorithms/binary_search.o \
 	data-structures/array/array.o \
+	data-structures/linked-list/linked-list.o \
 
-LIBS=$(OBJECTS_FOLDER)/array.o
+LIBS=$(OBJECTS_FOLDER)/array.o \
+	$(OBJECTS_FOLDER)/linked-list.o
 
 .PHONE: all clean
 
