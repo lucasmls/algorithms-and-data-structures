@@ -5,9 +5,11 @@ BINARIES_FOLDER=.bin
 OBJECTS_FOLDER=.objects
 
 BINARIES=algorithms/binary_search \
+	algorithms/rec_binary_search \
 	algorithms/selection_sort
 
 OBJECT_FILES=algorithms/binary_search.o \
+	algorithms/rec_binary_search.o \
 	algorithms/selection_sort.o \
 	data-structures/array/array.o \
 	data-structures/linked-list/linked-list.o \
