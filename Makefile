@@ -6,13 +6,15 @@ OBJECTS_FOLDER=.objects
 
 BINARIES=algorithms/binary_search \
 	algorithms/rec_binary_search \
-	algorithms/selection_sort
+	algorithms/selection_sort \
+	exercises/recursion/static_and_global
 
 OBJECT_FILES=algorithms/binary_search.o \
 	algorithms/rec_binary_search.o \
 	algorithms/selection_sort.o \
 	data-structures/array/array.o \
 	data-structures/linked-list/linked-list.o \
+	exercises/recursion/static_and_global.o \
 
 LIBS=$(OBJECTS_FOLDER)/array.o \
 	$(OBJECTS_FOLDER)/linked-list.o
