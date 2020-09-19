@@ -8,7 +8,8 @@ BINARIES=algorithms/binary_search \
 	algorithms/rec_binary_search \
 	algorithms/selection_sort \
 	exercises/recursion/static_and_global \
-	exercises/recursion/tail_and_head 
+	exercises/recursion/tail_and_head \
+	exercises/recursion/tree 
 
 OBJECT_FILES=algorithms/binary_search.o \
 	algorithms/rec_binary_search.o \
@@ -17,6 +18,7 @@ OBJECT_FILES=algorithms/binary_search.o \
 	data-structures/linked-list/linked-list.o \
 	exercises/recursion/static_and_global.o \
 	exercises/recursion/tail_and_head.o \
+	exercises/recursion/tree.o \
 
 LIBS=$(OBJECTS_FOLDER)/array.o \
 	$(OBJECTS_FOLDER)/linked-list.o
