@@ -10,7 +10,8 @@ BINARIES=algorithms/binary_search \
 	exercises/recursion/static_and_global \
 	exercises/recursion/tail_and_head \
 	exercises/recursion/tree \
-	exercises/recursion/indirect
+	exercises/recursion/indirect \
+	exercises/recursion/nested
 
 OBJECT_FILES=algorithms/binary_search.o \
 	algorithms/rec_binary_search.o \
@@ -21,6 +22,7 @@ OBJECT_FILES=algorithms/binary_search.o \
 	exercises/recursion/tail_and_head.o \
 	exercises/recursion/tree.o \
 	exercises/recursion/indirect.o \
+	exercises/recursion/nested.o \
 
 LIBS=$(OBJECTS_FOLDER)/array.o \
 	$(OBJECTS_FOLDER)/linked-list.o
