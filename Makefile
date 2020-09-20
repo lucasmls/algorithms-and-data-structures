@@ -14,7 +14,8 @@ BINARIES=algorithms/binary_search \
 	exercises/recursion/nested \
 	exercises/recursion/natural_num_sum \
 	exercises/recursion/factorial \
-	exercises/recursion/fibonacci
+	exercises/recursion/fibonacci \
+	exercises/recursion/memoized_fibonacci
 
 OBJECT_FILES=algorithms/binary_search.o \
 	algorithms/rec_binary_search.o \
@@ -29,6 +30,7 @@ OBJECT_FILES=algorithms/binary_search.o \
 	exercises/recursion/natural_num_sum.o \
 	exercises/recursion/factorial.o \
 	exercises/recursion/fibonacci.o \
+	exercises/recursion/memoized_fibonacci.o \
 
 LIBS=$(OBJECTS_FOLDER)/array.o \
 	$(OBJECTS_FOLDER)/linked-list.o
