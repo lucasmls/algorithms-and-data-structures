@@ -13,7 +13,8 @@ BINARIES=algorithms/binary_search \
 	exercises/recursion/indirect \
 	exercises/recursion/nested \
 	exercises/recursion/natural_num_sum \
-	exercises/recursion/factorial
+	exercises/recursion/factorial \
+	exercises/recursion/fibonacci
 
 OBJECT_FILES=algorithms/binary_search.o \
 	algorithms/rec_binary_search.o \
@@ -27,6 +28,7 @@ OBJECT_FILES=algorithms/binary_search.o \
 	exercises/recursion/nested.o \
 	exercises/recursion/natural_num_sum.o \
 	exercises/recursion/factorial.o \
+	exercises/recursion/fibonacci.o \
 
 LIBS=$(OBJECTS_FOLDER)/array.o \
 	$(OBJECTS_FOLDER)/linked-list.o
