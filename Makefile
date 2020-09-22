@@ -17,7 +17,8 @@ BINARIES=algorithms/binary_search \
 	exercises/recursion/fibonacci \
 	exercises/recursion/memoized_fibonacci \
 	exercises/recursion/combination \
-	exercises/recursion/tower_of_hanoi
+	exercises/recursion/tower_of_hanoi \
+	exercises/recursion/find_max_num \
 
 OBJECT_FILES=algorithms/binary_search.o \
 	algorithms/rec_binary_search.o \
@@ -35,6 +36,7 @@ OBJECT_FILES=algorithms/binary_search.o \
 	exercises/recursion/memoized_fibonacci.o \
 	exercises/recursion/combination.o \
 	exercises/recursion/tower_of_hanoi.o \
+	exercises/recursion/find_max_num.o \
 
 LIBS=$(OBJECTS_FOLDER)/array.o \
 	$(OBJECTS_FOLDER)/linked-list.o
