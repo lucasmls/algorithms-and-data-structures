@@ -9,6 +9,9 @@
  * Given an array and an element x of the array as a pivot, put x at its correct position
  * in sorted array and put all smaller elements (smaller than x) before x, and put all
  * greater elements (greater than x) after x. All this should be done in linear time.
+ * 
+ * Time complexity in the best case: O(n Log n)
+ * Time complexity in the worst case: O(nˆ2)
  */
 
 void swap(array_t *arr, int from, int to)
