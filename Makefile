@@ -7,6 +7,7 @@ OBJECTS_FOLDER=.objects
 BINARIES=algorithms/binary_search \
 	algorithms/rec_binary_search \
 	algorithms/selection_sort \
+	algorithms/quick_sort \
 	exercises/recursion/static_and_global \
 	exercises/recursion/tail_and_head \
 	exercises/recursion/tree \
@@ -23,6 +24,7 @@ BINARIES=algorithms/binary_search \
 OBJECT_FILES=algorithms/binary_search.o \
 	algorithms/rec_binary_search.o \
 	algorithms/selection_sort.o \
+	algorithms/quick_sort.o \
 	data-structures/array/array.o \
 	data-structures/linked-list/linked-list.o \
 	exercises/recursion/static_and_global.o \
