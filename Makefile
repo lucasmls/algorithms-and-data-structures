@@ -27,6 +27,7 @@ OBJECT_FILES=algorithms/binary_search.o \
 	algorithms/quick_sort.o \
 	data-structures/array/array.o \
 	data-structures/linked-list/linked-list.o \
+	data-structures/hash-table/hash-table.o \
 	exercises/recursion/static_and_global.o \
 	exercises/recursion/tail_and_head.o \
 	exercises/recursion/tree.o \
@@ -41,7 +42,8 @@ OBJECT_FILES=algorithms/binary_search.o \
 	exercises/recursion/find_max_num.o \
 
 LIBS=$(OBJECTS_FOLDER)/array.o \
-	$(OBJECTS_FOLDER)/linked-list.o
+	$(OBJECTS_FOLDER)/linked-list.o \
+	$(OBJECTS_FOLDER)/hash-table.o
 
 .PHONE: all clean
 
