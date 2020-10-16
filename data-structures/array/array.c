@@ -202,6 +202,22 @@ int array_is_empty(array_t *arr)
 }
 
 /**
+ * Informs if the given array is sorted or not.
+ */
+int array_is_sorted(array_t *arr)
+{
+  for (int i = 0; i < arr->length -1; i++)
+  {
+    if (arr->items[i] > arr->items[i + 1])
+    {
+      return -1;
+    }
+  }
+
+  return 1;
+}
+
+/**
  * Prints out all the items of the array.
  */
 void array_print(array_t *arr)

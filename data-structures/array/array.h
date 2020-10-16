@@ -85,6 +85,11 @@ int array_is_full(array_t *arr);
 int array_is_empty(array_t *arr);
 
 /**
+ * Informs if the given array is sorted or not.
+ */
+int array_is_sorted(array_t *arr);
+
+/**
  * Prints out all the items of the array.
  */
 void array_print(array_t *arr);
