@@ -206,7 +206,7 @@ int array_is_empty(array_t *arr)
  */
 int array_is_sorted(array_t *arr)
 {
-  for (int i = 0; i < arr->length -1; i++)
+  for (int i = 0; i < arr->length - 1; i++)
   {
     if (arr->items[i] > arr->items[i + 1])
     {
@@ -215,6 +215,39 @@ int array_is_sorted(array_t *arr)
   }
 
   return 1;
+}
+
+/**
+ * Splits the array between negative values in the left side and positive values in the right side
+ * Example:
+ *  input:  [4, 6, 8, -10, 12, 14, -2, 16, -18, 20]
+ *  output: [-18, -2, -10, 8, 12, 14, 6, 16, 4, 20]
+ */
+void array_split_between_negatives(array_t *arr)
+{
+  int i = 0;
+  int j = arr->length - 1;
+
+  while (j >= i)
+  {
+    while (arr->items[i] < 0)
+    {
+      i++;
+    }
+
+    while (arr->items[j] >= 0)
+    {
+      j--;
+    }
+
+    if (i < j)
+    {
+      array_element temp = arr->items[i];
+
+      arr->items[i] = arr->items[j];
+      arr->items[j] = temp;
+    }
+  }
 }
 
 /**
