@@ -251,6 +251,43 @@ void array_split_between_negatives(array_t *arr)
 }
 
 /**
+ * Given two sorted arrays, merge them sorted.
+ */
+array_t array_merge(array_t *first_array, array_t *second_array)
+{
+  array_t merged_array = array_create(first_array->length + second_array->length);
+
+  int i = 0;
+  int j = 0;
+
+  while (i < first_array->length && j < second_array->length)
+  {
+    if (array_get(first_array, i) < array_get(second_array, j))
+    {
+      array_push(&merged_array, array_get(first_array, i));
+      i++;
+      continue;
+    }
+
+    array_push(&merged_array, array_get(second_array, j));
+    j++;
+  }
+
+
+  for(; i < first_array->length; i++)
+  {
+    array_push(&merged_array, array_get(first_array, i));
+  }
+
+  for(; j < second_array->length; j++)
+  {
+    array_push(&merged_array, array_get(second_array, j));
+  }
+
+  return merged_array;
+}
+
+/**
  * Prints out all the items of the array.
  */
 void array_print(array_t *arr)

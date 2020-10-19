@@ -98,6 +98,11 @@ int array_is_sorted(array_t *arr);
 void array_split_between_negatives(array_t *arr);
 
 /**
+ * Given two sorted arrays, merge them sorted.
+ */
+array_t array_merge(array_t *first_array, array_t *second_array);
+
+/**
  * Prints out all the items of the array.
  */
 void array_print(array_t *arr);
