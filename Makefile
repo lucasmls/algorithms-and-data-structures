@@ -20,6 +20,7 @@ BINARIES=algorithms/binary_search \
 	exercises/recursion/combination \
 	exercises/recursion/tower_of_hanoi \
 	exercises/recursion/find_max_num \
+	exercises/array/single_missing_number \
 
 OBJECT_FILES=algorithms/binary_search.o \
 	algorithms/rec_binary_search.o \
@@ -40,6 +41,7 @@ OBJECT_FILES=algorithms/binary_search.o \
 	exercises/recursion/combination.o \
 	exercises/recursion/tower_of_hanoi.o \
 	exercises/recursion/find_max_num.o \
+	exercises/array/single_missing_number.o \
 
 LIBS=$(OBJECTS_FOLDER)/array.o \
 	$(OBJECTS_FOLDER)/linked-list.o \
