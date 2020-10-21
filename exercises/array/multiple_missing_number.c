@@ -40,7 +40,7 @@ void multiple_missing_number_unsorted_N_N(array_t arr)
   int max = array_max(&arr);
 
   array_t hash = array_create(max - min);
-  for (int i = 0; i < hash.length; i++)
+  for (int i = 0; i < hash.capacity; i++)
   {
     array_push(&hash, 0);
   }
