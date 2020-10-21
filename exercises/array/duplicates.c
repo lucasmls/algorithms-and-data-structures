@@ -24,22 +24,51 @@ void duplicates(array_t arr)
   }
 }
 
+/**
+ * Given a list of unsorted numbers that goes from N-N
+ * Find the missing number in between the list.
+ */
+void duplicates_hash(array_t arr)
+{
+  int max = array_max(&arr);
+
+  array_t hash = array_create(max); // 8
+  for (int i = 0; i < hash.capacity; i++)
+  {
+    array_push(&hash, 0);
+  }
+
+  for (int i = 0; i < arr.length; i++)
+  {
+    hash.items[arr.items[i]]++;
+  }
+
+  for (int i = 0; i < hash.length; i++)
+  {
+    if (hash.items[i] > 1)
+    {
+      printf("%d appeared %d times\n", i, hash.items[i]);
+    }
+  }
+}
+
 int main()
 {
-  array_t items = array_create(13);
-  array_push(&items, 0);
-  array_push(&items, 1);
+  array_t items = array_create(15); // 0 - 7
+  array_push(&items, 3);
+  array_push(&items, 3);
+  array_push(&items, 3);
+  array_push(&items, 3);
+  array_push(&items, 3);
+  array_push(&items, 4);
+  array_push(&items, 5);
+  array_push(&items, 6);
+  array_push(&items, 6);
+  array_push(&items, 6);
+  array_push(&items, 7);
   array_push(&items, 8);
-  array_push(&items, 9);
-  array_push(&items, 9);
-  array_push(&items, 13);
-  array_push(&items, 14);
-  array_push(&items, 15);
-  array_push(&items, 16);
-  array_push(&items, 16);
-  array_push(&items, 16);
-  array_push(&items, 16);
-  array_push(&items, 17);
 
   duplicates(items);
+  printf("-----\n");
+  duplicates_hash(items);
 }
