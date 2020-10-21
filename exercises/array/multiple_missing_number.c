@@ -3,7 +3,7 @@
 #include "../../data-structures/array/array.h"
 
 /**
- * Given a list of numbers that goes from N-N
+ * Given a list of sorted numbers that goes from N-N
  * Find the missing number in between the list.
  */
 void multiple_missing_number_N_N(array_t arr)

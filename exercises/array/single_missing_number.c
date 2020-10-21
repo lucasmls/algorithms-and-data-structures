@@ -2,7 +2,7 @@
 #include "../../data-structures/array/array.h"
 
 /**
- * Given a list of numbers starting from 1-N
+ * Given a list of sorted numbers starting from 1-N
  * Find the missing number in between the list.
  */
 int find_single_missing_number_1_N(array_t arr)
@@ -16,7 +16,7 @@ int find_single_missing_number_1_N(array_t arr)
 }
 
 /**
- * Given a list of numbers that goes from N-N
+ * Given a list of sorted numbers that goes from N-N
  * Find the missing number in between the list.
  */
 int find_single_missing_number_N_N(array_t arr)
