@@ -218,6 +218,22 @@ int array_is_sorted(array_t *arr)
 }
 
 /**
+ * Returns the index of the given element.
+ */
+int array_index_of(array_t *arr, array_element element)
+{
+  for (int i = 0; i < arr->length; i++)
+  {
+    if (array_get(arr, i) == element)
+    {
+      return i;
+    }
+  }
+
+  return -1;
+}
+
+/**
  * Splits the array between negative values in the left side and positive values in the right side
  * Example:
  *  input:  [4, 6, 8, -10, 12, 14, -2, 16, -18, 20]
@@ -273,13 +289,12 @@ array_t array_merge(array_t *first_array, array_t *second_array)
     j++;
   }
 
-
-  for(; i < first_array->length; i++)
+  for (; i < first_array->length; i++)
   {
     array_push(&merged_array, array_get(first_array, i));
   }
 
-  for(; j < second_array->length; j++)
+  for (; j < second_array->length; j++)
   {
     array_push(&merged_array, array_get(second_array, j));
   }

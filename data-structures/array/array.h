@@ -90,6 +90,11 @@ int array_is_empty(array_t *arr);
 int array_is_sorted(array_t *arr);
 
 /**
+ * Returns the index of the given element.
+ */
+int array_index_of(array_t *arr, array_element element);
+
+/**
  * Splits the array between negative values in the left side and positive values in the right side
  * Example:
  *  input: [1, 4, -3, -5, 4, 1]
