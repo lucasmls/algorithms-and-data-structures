@@ -35,6 +35,26 @@ int find_single_missing_number_N_N(array_t arr)
   return -1;
 }
 
+/**
+ * Given a list of unsorted numbers that goes from N-N
+ * Using brute force, find the missing number in between the list.
+ */
+int bf_find_single_missing_number_in_unsorted(array_t arr)
+{
+  int min = array_min(&arr);
+
+  for (int i = 0; i < arr.length; i++)
+  {
+    int position = array_index_of(&arr, min + i);
+    if (position == -1)
+    {
+      return min + i;
+    }
+  }
+
+  return -1;
+}
+
 int main()
 {
   array_t items = array_create(11);
@@ -68,4 +88,20 @@ int main()
 
   missing_number = find_single_missing_number_N_N(n_to_n);
   printf("The missing number is: %d\n", missing_number);
+
+  array_t unsorted_n_to_n = array_create(11);
+  array_push(&unsorted_n_to_n, 6);  // index: 0
+  array_push(&unsorted_n_to_n, 16); // index: 1
+  array_push(&unsorted_n_to_n, 7);  // index: 2
+  array_push(&unsorted_n_to_n, 17); // index: 3
+  array_push(&unsorted_n_to_n, 10); // index: 4
+  array_push(&unsorted_n_to_n, 8);  // index: 5
+  array_push(&unsorted_n_to_n, 11); // index: 6
+  array_push(&unsorted_n_to_n, 13); // index: 7
+  array_push(&unsorted_n_to_n, 14); // index: 8
+  array_push(&unsorted_n_to_n, 9);  // index: 9
+  array_push(&unsorted_n_to_n, 15); // index: 10
+
+  missing_number = bf_find_single_missing_number_in_unsorted(unsorted_n_to_n);
+  printf("The missing number of the unsorted array is: %d\n", missing_number);
 }
