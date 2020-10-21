@@ -30,6 +30,35 @@ void multiple_missing_number_N_N(array_t arr)
   }
 }
 
+/**
+ * Given a list of unsorted numbers that goes from N-N
+ * Find the missing number in between the list.
+ */
+void multiple_missing_number_unsorted_N_N(array_t arr)
+{
+  int min = array_min(&arr);
+  int max = array_max(&arr);
+
+  array_t hash = array_create(max - min);
+  for (int i = 0; i < hash.length; i++)
+  {
+    array_push(&hash, 0);
+  }
+
+  for (int i = 0; i < arr.length; i++)
+  {
+    hash.items[arr.items[i] - min]++;
+  }
+
+  for (int i = 1; i <= arr.length; i++)
+  {
+    if (hash.items[i] == 0)
+    {
+      printf("Missing: %d\n", i + min);
+    }
+  }
+}
+
 int main()
 {
   array_t n_to_n = array_create(11);
@@ -44,4 +73,6 @@ int main()
   array_push(&n_to_n, 17);
 
   multiple_missing_number_N_N(n_to_n);
+
+  multiple_missing_number_unsorted_N_N(n_to_n);
 }
