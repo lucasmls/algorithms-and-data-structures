@@ -23,6 +23,7 @@ BINARIES=algorithms/binary_search \
 	exercises/array/single_missing_number \
 	exercises/array/multiple_missing_number \
 	exercises/array/duplicates \
+	exercises/string/change_case \
 
 OBJECT_FILES=algorithms/binary_search.o \
 	algorithms/rec_binary_search.o \
@@ -46,6 +47,7 @@ OBJECT_FILES=algorithms/binary_search.o \
 	exercises/array/single_missing_number.o \
 	exercises/array/multiple_missing_number.o \
 	exercises/array/duplicates.o \
+	exercises/string/change_case.o \
 
 LIBS=$(OBJECTS_FOLDER)/array.o \
 	$(OBJECTS_FOLDER)/linked-list.o \
