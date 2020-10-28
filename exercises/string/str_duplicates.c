@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "../../data-structures/array/array.h"
 
@@ -35,8 +36,34 @@ void duplicates(char chars[])
   }
 }
 
+/**
+ * Given a lowercase string.
+ * Prints out which letters iw duplicated.
+ */
+void has_duplicate(char chars[])
+{
+  long int hash = 0;
+  long int x = 0;
+
+  for (int i = 0; chars[i] != '\0'; i++)
+  {
+    x = 1;
+    x = x << (chars[i] - 97);
+
+    if ((x & hash) > 0)
+    {
+      printf("%c is duplicated\n", chars[i]);
+      continue;
+    }
+
+    hash = x | hash;
+  }
+}
+
 int main()
 {
   char letters[] = "laisla";
   duplicates(letters);
+  printf("---\n");
+  has_duplicate(letters);
 }
