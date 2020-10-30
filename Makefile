@@ -25,6 +25,7 @@ BINARIES=algorithms/binary_search \
 	exercises/array/duplicates \
 	exercises/string/str_duplicates \
 	exercises/string/change_case \
+	exercises/string/permutation \
 
 OBJECT_FILES=algorithms/binary_search.o \
 	algorithms/rec_binary_search.o \
@@ -50,6 +51,7 @@ OBJECT_FILES=algorithms/binary_search.o \
 	exercises/array/duplicates.o \
 	exercises/string/str_duplicates.o \
 	exercises/string/change_case.o \
+	exercises/string/permutation.o \
 
 LIBS=$(OBJECTS_FOLDER)/array.o \
 	$(OBJECTS_FOLDER)/linked-list.o \
