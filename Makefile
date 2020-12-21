@@ -34,6 +34,7 @@ OBJECT_FILES=algorithms/binary_search.o \
 	data-structures/array/array.o \
 	data-structures/linked-list/linked-list.o \
 	data-structures/hash-table/hash-table.o \
+	data-structures/stack/stack.o \
 	exercises/recursion/static_and_global.o \
 	exercises/recursion/tail_and_head.o \
 	exercises/recursion/tree.o \
@@ -55,7 +56,8 @@ OBJECT_FILES=algorithms/binary_search.o \
 
 LIBS=$(OBJECTS_FOLDER)/array.o \
 	$(OBJECTS_FOLDER)/linked-list.o \
-	$(OBJECTS_FOLDER)/hash-table.o
+	$(OBJECTS_FOLDER)/hash-table.o \
+	$(OBJECTS_FOLDER)/stack.o \
 
 .PHONE: all clean
 
