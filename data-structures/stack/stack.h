@@ -23,17 +23,17 @@ _stack_t stack_create(int capacity);
 /**
  * @brief Inserts a new item into the Stack
  */
-void stack_push(_stack_t *stack, int item);
+void stack_push(_stack_t *stack, char item);
 
 /**
  * @brief Remove and returns the top most item of the Stack
  */
-int stack_pop(_stack_t *stack);
+char stack_pop(_stack_t *stack);
 
 /**
  * @brief Take a peek in to the top most item of the Stack
  */
-int stack_peek(_stack_t *stack);
+char stack_peek(_stack_t *stack);
 
 /**
  * @brief Returns how much items is stored in the Stack.
