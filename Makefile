@@ -28,6 +28,7 @@ BINARIES=algorithms/binary_search \
 	exercises/string/permutation \
 	exercises/stack/parenthesis_matching \
 	exercises/stack/infix_to_postfix \
+	exercises/stack/balanced_expression \
 
 OBJECT_FILES=algorithms/binary_search.o \
 	algorithms/rec_binary_search.o \
@@ -57,6 +58,7 @@ OBJECT_FILES=algorithms/binary_search.o \
 	exercises/string/permutation.o \
 	exercises/stack/parenthesis_matching.o \
 	exercises/stack/infix_to_postfix.o \
+	exercises/stack/balanced_expression.o \
 
 LIBS=$(OBJECTS_FOLDER)/array.o \
 	$(OBJECTS_FOLDER)/linked-list.o \
